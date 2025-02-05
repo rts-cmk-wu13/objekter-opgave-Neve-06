@@ -2,7 +2,7 @@
 let heroElm = document.querySelector(".hero")
 let heroDiv = document.createElement("div")
 let serviceElm = document.querySelector(".services")
-
+let facilitiesElm = document.querySelector(".facilities")
 
 // section hero -------------------
 heroElm.classList.add("full-width")
@@ -38,6 +38,25 @@ services.forEach(service =>{
 })
 
 // section facilities -------------------
+
+
+
+facilities.options.forEach(option =>{
+    let facilitiesDiv = document.createElement("div");
+    facilitiesDiv.classList.add("facility__div");
+    let facilitiesIcon = document.createElement("img");
+    facilitiesIcon.innerHTML = `<img src="${option.icon}">`
+    facilitiesIcon.classList.add("facilities__img")
+    let facilitiesHeadlineSmall = document.createElement("h2");
+    facilitiesHeadlineSmall.classList.add("facilities__headline-small")
+    facilitiesHeadlineSmall.textContent = `${option.headline}`
+    let facilitiesText = document.createElement("p");
+    facilitiesText.textContent = `${option.text}`
+    facilitiesText.classList.add("facility__text")
+    facilitiesDiv.append(facilitiesIcon, facilitiesHeadlineSmall, facilitiesText)
+    facilitiesElm.appendChild(facilitiesDiv)
+})
+
 
 // section sites -------------------
 
