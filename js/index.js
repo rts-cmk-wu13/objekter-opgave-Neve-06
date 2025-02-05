@@ -19,16 +19,22 @@ heroElm.append(heroDiv)
 // section services -------------------
 
 services.forEach(service =>{
+    let serviceDiv = document.createElement("div")
+    serviceDiv.classList.add("service__div")
     let serviceFigure = document.createElement("figure");
-    serviceFigure.classList.add("figure")
+    serviceFigure.classList.add("service__figure")
+    serviceFigure.innerHTML = `<img src="${service.illustration}">`
     let serviceHeadline = document.createElement("h2");
     serviceHeadline.textContent = `${service.headline}`
     let serviceInfo = document.createElement("p")
+    serviceInfo.classList.add("service__text")
     serviceInfo.textContent = `${service.text}`
     let serviceDiscover = document.createElement("p")
+    serviceDiscover.classList.add("service__link-text")
     serviceDiscover.textContent = `${service.linktext}`
     serviceFigure.append(serviceHeadline, serviceInfo, serviceDiscover)
-    serviceElm.appendChild(serviceFigure)
+    serviceDiv.append(serviceFigure)
+    serviceElm.appendChild(serviceDiv)
 })
 
 // section facilities -------------------
