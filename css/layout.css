@@ -9,6 +9,13 @@
         grid-template-columns:
             [fullw-start] 1fr [content-start] repeat(6, 15rem) [content-end] 1fr [fullw-end];
     }
+
+    .service__figure{
+        grid-column: span 2;
+    }
+    .service__div{
+        grid-column: span 2;
+    }
 }
 
 
