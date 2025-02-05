@@ -7,14 +7,18 @@
 @media screen and (width >=64rem) {
     .wrapper {
         grid-template-columns:
-            [fullw-start] 1fr [content-start] repeat(6, 15rem) [content-end] 1fr [fullw-end];
+            [fullw-start] 1fr [content-start] repeat(12, 7rem) [content-end] 1fr [fullw-end];
     }
 
     .service__figure{
         grid-column: span 2;
     }
     .service__div{
-        grid-column: span 2;
+        grid-column: span 4;
+    }
+
+    .facility__div{
+        grid-column: span 3;
     }
 }
 
